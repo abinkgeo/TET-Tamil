@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Website HTML CSS JS | Codehal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="main">
+        <header class="header">
+            <a href="#" class="logo">TET.</a>
+
+            <nav class="navbar">
+                <a href="#" class="active">Home</a>
+                
+               
+                
+            </nav>
+        </header>
+
+        <div class="container">
+            <section class="quiz-section">
+                <div class="quiz-box">
+                   <h1>Test</h1>
+                   <div class="quiz-header">
+                    <span>PPGIT TET-2024</span>
+                    <span class="header-score">Score:0 / 10</span>
+                   </div>
+
+                   <h2 class="question-text">What does HTML stand for?</h2>
+
+                   <div class="option-list">
+                    <div class="option-list">
+                        <!-- Change input type to checkbox for multiple options -->
+                        <div class="option"><input type="checkbox" name="option1" value="${questions[index].options[0]}"><span>${questions[index].options[0]}</span></div>
+                        <div class="option"><input type="checkbox" name="option2" value="${questions[index].options[1]}"><span>${questions[index].options[1]}</span></div>
+                        <div class="option"><input type="checkbox" name="option3" value="${questions[index].options[2]}"><span>${questions[index].options[2]}</span></div>
+                        <div class="option"><input type="checkbox" name="option4" value="${questions[index].options[3]}"><span>${questions[index].options[3]}</span></div>
+                    </div>
+                    
+                   </div> 
+
+                   <div class="quiz-footer">
+                    <span class="question-total">1 of 10 Questions</span>
+                    <button class="next-btn">அடுத்த </button>
+                   </div>
+                </div>
+
+                <div class="result-box">
+                     <h2>You Have succesfully completed TET</h2>
+                     <svg data-slot="icon" fill="none" stroke-width="1" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"></path>
+                      </svg>
+                      
+                    
+                     <div class="buttons">
+                        <button class="tryAgain-btn">Try Again</button>
+                        <button class="goHome-btn">Go To Home</button>
+                     </div>
+                </div>
+            </section>
+        
+
+        <section class="home">
+            <div class="home-content">
+                <h1>Welcome To PPGIT TET-2024</h1>
+                
+                <p> <strong>Common Entrance Exam For All Department's</strong><br>
+                    
+
+                    
+                    B.Tech. Agricultural Engineering<br>
+                    B.Tech. Artificial Intelligence and Data Science Engineering<br>
+                    B.E. Biomedical Engineering<br>
+                    B.E. Computer Science and Engineering<br>
+                    B.E. Computer Science and Engineering (AI&ML)<br>
+                    B.Tech. Information Technology<br>
+                    B.E. Electronics and Communication Engineering<br>
+                    B.E. Mechanical Engineering</p><br>
+                    <button class="start-btn">Start Test</button>
+            </div>
+        </section>
+    </div>
+    </main>
+
+    <div class="popup-info">
+        <h2>தேர்வு வழிகாட்டுதல்கள்</h2>
+        <span class="info">1.கேள்விகள் எளிதானவை மற்றும் புரிந்துகொள்ளக்கூடியவை.</span>
+       
+        <span class="info">2.தேர்வின் கால அளவு 1 மணி நேரம்.</span>
+        <span class="info">3.பங்கேற்பாளர்களால் பதிலை மீண்டும் ஒரு முறை சரிபார்க்க முடியவில்லை.</span>
+        <span class="info">4.கேள்விகள் 12 ஆம் வகுப்பு கணிதம், இயற்பியல், வேதியியல் ஆகியவற்றிலிருந்து எடுக்கப்பட்டுள்ளன.</span>
+
+        <div class="btn-group">
+            <button class="info-btn exit-btn">வெளியேறு</button>
+            <a href="#" class="info-btn continue-btn">தொடரவும்</a>
+        </div>
+    </div>
+
+    <script src="question.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.13/xlsx.full.min.js"></script>
+
+</body>
+
+</html>
